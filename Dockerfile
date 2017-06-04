@@ -16,3 +16,6 @@ RUN rm -rf /tm/files
 
 # Switch to liferay user
 USER liferay
+
+# Set JAVA_HOME variable
+ENV JAVA_HOME /usr/java/default
