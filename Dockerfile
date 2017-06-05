@@ -12,7 +12,7 @@ RUN yum -y upgrade && \
     yum clean all
 
 # Clean temporary files
-RUN rm -rf /tm/files
+RUN rm -rf /tmp/files
 
 # Switch to liferay user
 USER liferay
