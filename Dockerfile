@@ -8,14 +8,14 @@ COPY files /tmp/files
 
 # Install updates and java
 RUN yum -y upgrade && \
-    yum -y install /tmp/files/jre-8u131-linux-x64.rpm && \
+    yum -y install /tmp/files/jre-8u141-linux-x64.rpm && \
     yum clean all
 
 # Clean temporary files
 RUN rm -rf /tmp/files
 
-# Switch to liferay user
-USER liferay
+# Switch to jboss user
+USER jboss
 
 # Set JAVA_HOME variable
 ENV JAVA_HOME /usr/java/default
